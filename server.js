@@ -18,6 +18,12 @@ const userSchema = new mongoose.Schema({
 // Create a model based on the schema
 const User = mongoose.model('User', userSchema);
 
+// Function to validate email address
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 // Handle POST request for sign-up
 app.post('/signup', async (req, res) => {
     const { username, email, password } = req.body;
@@ -27,12 +33,12 @@ app.post('/signup', async (req, res) => {
         return res.status(400).send('Please fill in all fields');
     }
 
-    // Check if the email is valid (optional)
+    // Check if the email is valid
     if (!validateEmail(email)) {
         return res.status(400).send('Please enter a valid email');
     }
 
-    // Check if the username is already taken (optional)
+    // Check if the username is already taken
     const existingUser = await User.findOne({ username });
     if (existingUser) {
         return res.status(400).send('Username already taken');
