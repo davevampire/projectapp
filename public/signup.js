@@ -197,7 +197,6 @@
 //     }
 // }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('signupForm');
     form.addEventListener('submit', function (event) {
@@ -222,9 +221,10 @@ function validateForm() {
 }
 
 function createUser() {
-    const userName = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const passWord = document.getElementById('password').value;
+    const form = document.getElementById('signupForm');
+    const userName = form.elements['user'].value;
+    const email = form.elements['Email'].value;
+    const passWord = form.elements['pass'].value;
 
     // Send the form data to the server
     fetch('/signup', {
@@ -238,10 +238,7 @@ function createUser() {
         .then((data) => {
             alert(data); // Show the response from the server
             // Clear form fields
-            document.getElementById('username').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('password').value = '';
-            document.getElementById('password1').value = '';
+            form.reset();
         })
         .catch((error) => {
             console.error('Error:', error);
