@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="signup.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Sign In</h1>
+        </div>
+
+        <div class="controls">
+            <label for="username" class="users">Username</label><br>
+            <span class="icon"><i class="fa fa-user"></i></span>
+            <input type="text" name="username" class="username" placeholder="Type your username" id="loginUser" onkeyup="userlogger()" required>
+        </div>
+        
+
+        <div class="controls">
+            
+            <label for="password" class="users">Password</label><br>
+            <span class="icon"><i class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Type your password" id="loginPass" required>
+        </div>
+
+        <div class="controls">
+            <label for="Email" class="users">Email</label><br>
+            <span class="icon"><i class="fa fa-envelope"></i></span>
+            <input type="text" name="Email" placeholder="Type your Email" id="loginEmail" required>
+        </div>
+        <div class="Login">
+            <input type="button" name="Login" value="Login" onclick="Tryagain()">
+        </div><br><br>
+        <div class="Applogin">
+            <span class="otherapp"><a href="https://www.facebook.com/lagahid19"><i class="fa fa-facebook" id="facebook"></a></i></span>
+            <span class="otherapp"><i class="fa fa-twitter"></i></span>
+            <span class="otherapp"><i class="fa fa-instagram"></i></span>
+        </div><br>
+
+        <div class="register">
+            <span>Don't have an account? <a href="signup.html">Sign up</a></span>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="signup.js"></script>
+</head>
+<body>
+    
+    <div class="form">
+        <div class="h1">
+            <h1>Sign up</h1>
+        </div>
+
+        <div class="info">
+            <label for="user" class="fire">Username</label><br>
+            <span class="icon"><i class="fa fa-user"></i></span>
+            <input type="text" name="user" placeholder="Enter a username" id="username" onkeyup="userchecker()" required>
+        </div>
+
+        <div class="info">
+            <label for="Email" class="fire">Email</label><br>
+            <span class="icon"><i class="fa fa-envelope"></i></span>
+            <input type="email" name="Email" placeholder="Enter an Email" id="email" onkeyup="emailchecker()" required>
+        </div>
+
+        <div class="info">
+            <label for="pass" class="fire">Password</label><br>
+            <span class="icon"><i class="fa fa-lock"></i></span>
+            <input type="password" name="pass" placeholder="Enter Password" id="password" onkeyup="passchecker()" required>
+        </div>
+
+        <div class="info">
+            <label for="pass1" class="fire">Confirm Password</label><br>
+            <span class="icon"><i class="fa fa-lock"></i></span>
+            <input type="password" name="pass1" placeholder="Re-Enter Password" id="password1" onkeyup="pass1checker()" required>
+        </div><br>
+
+        <div class="create">
+            <input type="submit"  value="Create" class="create" onclick="create()">
+            <input type="reset" value="Reset" class="reset" onclick="reset()">
+        </div><br><br>
+
+        <div class="login1">
+            <span>Already have an account? <a href="login.html">Sign In</a></span>
+        </div><br><br>
+
+        <div class="Appsignup">
+            <span class="otherapp"><a href="https://www.facebook.com/lagahid19"><i class="fa fa-facebook" id="facebook"></a></i></span>
+            <span class="otherapp"><i class="fa fa-twitter"></i></span>
+            <span class="otherapp"><i class="fa fa-instagram"></i></span>
+        </div><br>
+    </div>
+</body>
+</html>
